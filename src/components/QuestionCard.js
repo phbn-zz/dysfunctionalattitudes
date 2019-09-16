@@ -24,7 +24,7 @@ class QuestionCard extends React.Component {
         scale={this.props.scale}
         bottom={this.props.bottom}
       >
-        <StyledText>{this.props.Question}</StyledText>
+        <QuestionText>{this.props.Question}</QuestionText>
         <ScoreButtonDiv>
           <ScoreButton onClick={e => this.submitAnswer(e, 4)} color={'#ff0000'}>
             Disagree
@@ -67,10 +67,17 @@ const Card = styled.div`
   ${props => `bottom: ${props.bottom}px`};
 `;
 
-const StyledText = styled.p`
+const QuestionText = styled.p`
+  line-height: 1.5em;
+  height: 3em; /* height is 2x line-height, so two lines will display */
+  overflow: hidden;
+  padding: 10px;
+  color: #f8f8f8;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  margin: 0 0 24px;
   text-align: center;
-  margin: 30px;
-  height: 100px;
 `;
 
 const ScoreButtonDiv = styled.div`
@@ -78,16 +85,25 @@ const ScoreButtonDiv = styled.div`
 `;
 
 const ScoreButton = styled.button`
-  background: ${props => props.color || 'palevioletred'};
-  color: #000;
-  margin: 0 5px;
-  padding: 8px 14px;
-  cursor: pointer;
-  border: 1px solid #fff;
-  outline: 0;
-  font-weight: 300;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #60a3bc;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin: 20px;
+  font-weight: bold;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+
   :hover {
-    opacity: 0.8;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.4s ease 0s;
   }
 `;
 

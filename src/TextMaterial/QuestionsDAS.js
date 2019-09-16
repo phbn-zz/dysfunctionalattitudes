@@ -1,15 +1,7 @@
-export const ModifiedScale = {
-  AgreeStrongly: -2,
-  AgreeSlightly: -1,
-  Neutral: 0,
-  DisagreeSlightly: 1,
-  DisagreeStrongly: 2
-};
-
-export const Questions = [
+export const QuestionsArray = [
   {
     id: 1,
-    Score: 0,
+    Score: 10,
     Answered: false,
     Category: 'Approval',
     Question:
@@ -47,7 +39,7 @@ export const Questions = [
   },
   {
     id: 6,
-    Score: 0,
+    Score: 15,
     Answered: false,
     Category: 'Love',
     Question: 'I cannot find happiness without being loved by another person.'
@@ -83,7 +75,7 @@ export const Questions = [
   },
   {
     id: 11,
-    Score: 0,
+    Score: 9,
     Answered: false,
     Category: 'Achievement',
     Question:
@@ -121,7 +113,7 @@ export const Questions = [
   },
   {
     id: 16,
-    Score: 0,
+    Score: 18,
     Answered: false,
     Category: 'Perfectionism',
     Question:
@@ -158,7 +150,7 @@ export const Questions = [
   },
   {
     id: 21,
-    Score: 0,
+    Score: 4,
     Answered: false,
     Category: 'Entitlement',
     Question:
@@ -198,7 +190,7 @@ export const Questions = [
   },
   {
     id: 26,
-    Score: 0,
+    Score: 7,
     Answered: false,
     Category: 'Omnipotence',
     Question:
@@ -237,7 +229,7 @@ export const Questions = [
   },
   {
     id: 31,
-    Score: 0,
+    Score: 19,
     Answered: false,
     Category: 'Autonomy',
     Question:

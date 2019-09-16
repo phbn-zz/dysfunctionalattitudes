@@ -3,7 +3,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import { Header, Container, CardContainer, Footer } from 'components/styles';
+import {
+  Header,
+  HeaderText,
+  Container,
+  CardContainer,
+  Footer
+} from 'components/styles';
 
 import QuestionCard from 'components/QuestionCard';
 
@@ -17,7 +23,11 @@ class main extends React.Component {
     }
     return (
       <Container>
-        <Header>Welcome, Traveller. What is your attitude to life?</Header>
+        <Header>
+          <HeaderText>
+            Welcome, Traveller. What is your attitude to life?
+          </HeaderText>
+        </Header>
         <CardContainer>
           {this.props.Questions.filter(question => {
             return question.Answered === false;

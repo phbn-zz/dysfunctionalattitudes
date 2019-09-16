@@ -9,7 +9,7 @@ class ExplanationCard extends Component {
   render() {
     return (
       <Container>
-        <HeaderText>Header</HeaderText>
+        <Header2Text>{this.props.CategorySelected}</Header2Text>
         <StyledText>{Descriptions[this.props.CategorySelected]}</StyledText>
       </Container>
     );
@@ -18,15 +18,31 @@ class ExplanationCard extends Component {
 
 const Container = styled.div`
   display: flex;
-  margin-top: 100px;
+  margin-top: 10vh;
+  text-align: left;
   width: 400px;
   height: 400px;
   background-color: grey;
+  flex-direction: column;
 `;
 
-const HeaderText = styled.p``;
+const Header2Text = styled.p`
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+  margin: 24px 0 24px;
+  text-align: center;
+`;
 
-const StyledText = styled.p``;
+const StyledText = styled.p`
+  padding: 10px;
+  color: #f8f8f8;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  margin: 0 0 24px;
+`;
 
 const mapStateToProps = state => {
   return {

@@ -11,6 +11,15 @@ export const Header = styled.div`
   color: white;
 `;
 
+export const HeaderText = styled.p`
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 72px;
+  text-align: center;
+  text-transform: uppercase;
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -47,7 +56,6 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-gap: 50px;
-  text-align: center;
   justify-items: center;
   justify-content: center;
   margin: 24px 0;
